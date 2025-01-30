@@ -8,19 +8,25 @@ class Fraction(object):
         '''
         if denominator == 0:
             raise ZeroDivisionError
+        
         if isinstance(numerator, str):
             splitStr = numerator.split('/')
+
             if len(splitStr) > 2:
                 self.numerator = 0
                 return
+            
             try:
                 self.numerator = int(splitStr[0])
                 self.denominator = int(splitStr[1])
+
             except ValueError:
                 self.numerator = 0
+
         elif numerator%1 == 0 and denominator%1 == 0:
             self.numerator = numerator
             self.denominator = denominator
+            
         else:
             self.numerator = 0
         pass
