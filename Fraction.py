@@ -36,12 +36,10 @@ class Fraction(object):
         @fn get_denominator returns the denominator in lowest terms.
 
         '''  
-        sign = "" if self.denominator>-1 else"-"
-
         if self.numerator % self.denominator == 0:
-            return sign + "1"
+            return "1"
         
-        return sign + str(abs(self.denominator//Fraction.gcd(self.numerator,self.denominator)))
+        return str(abs(self.denominator//Fraction.gcd(self.numerator,self.denominator)))
 
     def get_fraction(self):
         #TODO
