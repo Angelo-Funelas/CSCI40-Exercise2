@@ -1,6 +1,11 @@
 class Fraction(object):
 
     def __init__(self, numerator=0, denominator=1):
+        '''
+        @constructor checks if arguments are valid. If invalid, the numerator is 
+        set to 0, causing the fraction to be equal to 0.
+
+        '''
         if denominator == 0:
             raise ZeroDivisionError
         if isinstance(numerator, str):
