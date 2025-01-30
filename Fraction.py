@@ -50,5 +50,5 @@ class Fraction(object):
         return sign + str(abs(self.denominator//Fraction.gcd(self.numerator,self.denominator)))
 
     def get_fraction(self):
-        #TODO
-        pass
+        nume_isNegative = True if '-' in self.get_numerator() else False
+        deno_isNegative = True if '-' in self.get_denominator() else False
