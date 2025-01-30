@@ -13,9 +13,9 @@ class Fraction(object):
             return 0
         
         if a%b == 0 or b%a == 0:
-            return min(a,b)
+            return min(abs(a),abs(b))
         
-        for num in range(min(a,b),0,-1):
+        for num in range(min(abs(a),abs(b)),0,-1):
             if a%num == 0 and b%num == 0:
                 return num
         
