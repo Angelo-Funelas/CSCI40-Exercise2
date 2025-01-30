@@ -20,8 +20,12 @@ class Fraction(object):
                 return num
         
     def get_numerator(self):
-        
+        '''
+        @fn get_numerator returns the numerator in lowest terms.
+
+        '''   
         sign = "" if self.numerator>-1 else "-"
+        
         if self.numerator % self.denominator == 0:
             return sign + str(abs(self.numerator//self.denominator))
         
