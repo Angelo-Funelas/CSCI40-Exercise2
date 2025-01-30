@@ -9,8 +9,8 @@ class Fraction(object):
         pass
 
     def get_numerator(self):
-        #TODO
-        pass
+        if self.numerator % self.denominator == 0:
+            return self.numerator//self.denominator
 
     def get_denominator(self):
         #TODO
