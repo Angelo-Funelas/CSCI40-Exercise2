@@ -21,8 +21,9 @@ class Fraction(object):
         
     def get_numerator(self):
         if self.numerator % self.denominator == 0:
-            return self.numerator//self.denominator
-        return self.get_numerator//Fraction.gcd(self.numerator,self.denominator)
+            return str(self.numerator//self.denominator)
+        
+        return str(self.get_numerator//Fraction.gcd(self.numerator,self.denominator))
 
     def get_denominator(self):
         #TODO
