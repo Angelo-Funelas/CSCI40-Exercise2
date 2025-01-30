@@ -5,8 +5,12 @@ class Fraction(object):
             raise ZeroDivisionError
         if isinstance(numerator, str):
             splitStr = numerator.split('/')
-            self.numerator = int(splitStr[0])
-            self.denominator = int(splitStr[1])
+            try:
+                self.numerator = int(splitStr[0])
+                self.denominator = int(splitStr[1])
+            except ValueError:
+                self.numerator = 0
+                self.denominator = 1
         elif numerator%1 == 0 and denominator%1 == 0:
             self.numerator = numerator
             self.denominator = denominator
