@@ -74,4 +74,5 @@ class Fraction(object):
         '''
         if self.numerator == 0:
             return '0'
+        
         return f"{self.get_numerator()}/{self.get_denominator()}"
