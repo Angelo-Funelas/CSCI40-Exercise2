@@ -5,6 +5,10 @@ class Fraction(object):
         pass
 
     def gcd(a, b):
+        '''
+        @fn gcd returns the greatest common divisor between two integers.
+
+        '''
         if a == 0 or b == 0:
             return 0
         if a%b == 0 or b%a == 0:
