@@ -58,6 +58,10 @@ class Fraction(object):
         return str(abs(self.denominator//Fraction.gcd(self.numerator,self.denominator)))
 
     def get_fraction(self):
+        '''
+        @fn get_fraction returns the numerator and denominator in lowest terms.
+
+        '''
         if self.numerator == 0 or self.denominator == 0:
             return '0'
         return f"{self.get_numerator()}/{self.get_denominator()}"
