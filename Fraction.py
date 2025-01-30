@@ -60,9 +60,4 @@ class Fraction(object):
     def get_fraction(self):
         if self.numerator == 0 or self.denominator == 0:
             return '0'
-        nume_isNegative = True if '-' in self.get_numerator() else False
-        deno_isNegative = True if '-' in self.get_denominator() else False
-        absFraction = f"{abs(int(self.get_numerator()))}/{abs(int(self.get_denominator()))}"
-        if (nume_isNegative and not deno_isNegative) or (not nume_isNegative and deno_isNegative):
-            return "-" + absFraction
-        return absFraction
+        return f"{self.get_numerator()}/{self.get_denominator()}"
