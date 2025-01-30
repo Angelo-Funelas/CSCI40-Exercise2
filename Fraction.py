@@ -1,6 +1,8 @@
 class Fraction(object):
 
     def __init__(self, numerator=0, denominator=1):
+        if denominator == 0:
+            raise ZeroDivisionError
         if isinstance(numerator, str):
             splitStr = numerator.split('/')
             self.numerator = int(splitStr[0])
@@ -50,6 +52,8 @@ class Fraction(object):
         return sign + str(abs(self.denominator//Fraction.gcd(self.numerator,self.denominator)))
 
     def get_fraction(self):
+        if self.numerator == 0 or self.denominator == 0:
+            return '0'
         nume_isNegative = True if '-' in self.get_numerator() else False
         deno_isNegative = True if '-' in self.get_denominator() else False
         absFraction = f"{abs(int(self.get_numerator()))}/{abs(int(self.get_denominator()))}"
