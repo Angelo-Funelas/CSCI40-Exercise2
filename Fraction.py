@@ -5,6 +5,10 @@ class Fraction(object):
             raise ZeroDivisionError
         if isinstance(numerator, str):
             splitStr = numerator.split('/')
+            if len(splitStr) > 2:
+                self.numerator = 0
+                self.denominator = 1
+                return 
             try:
                 self.numerator = int(splitStr[0])
                 self.denominator = int(splitStr[1])
