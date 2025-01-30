@@ -54,3 +54,4 @@ class Fraction(object):
         deno_isNegative = True if '-' in self.get_denominator() else False
         if (nume_isNegative and not deno_isNegative) or (not nume_isNegative and deno_isNegative):
             return f"{self.get_numerator()}/{self.get_denominator()}"
+        return f"{abs(int(self.get_numerator()))}/{abs(int(self.get_denominator()))}"
