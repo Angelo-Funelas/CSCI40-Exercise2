@@ -20,10 +20,12 @@ class Fraction(object):
                 return num
         
     def get_numerator(self):
-        if self.numerator % self.denominator == 0:
-            return str(self.numerator//self.denominator)
         
-        return str(self.get_numerator//Fraction.gcd(self.numerator,self.denominator))
+        sign = "" if self.numerator>-1 else "-"
+        if self.numerator % self.denominator == 0:
+            return sign + str(abs(self.numerator//self.denominator))
+        
+        return sign + str(abs(self.get_numerator//Fraction.gcd(self.numerator,self.denominator)))
 
     def get_denominator(self):
         #TODO
