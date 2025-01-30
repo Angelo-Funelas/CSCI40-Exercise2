@@ -36,7 +36,7 @@ class Fraction(object):
         @fn get_numerator returns the numerator in lowest terms.
 
         '''   
-        sign = "" if self.numerator>-1 else "-"
+        sign = "" if self.numerator//self.denominator>-1 else "-"
         
         if self.numerator % self.denominator == 0:
             return sign + str(abs(self.numerator//self.denominator))
@@ -48,12 +48,10 @@ class Fraction(object):
         @fn get_denominator returns the denominator in lowest terms.
 
         '''  
-        sign = "" if self.denominator>-1 else"-"
-
         if self.numerator % self.denominator == 0:
-            return sign + "1"
+            return "1"
         
-        return sign + str(abs(self.denominator//Fraction.gcd(self.numerator,self.denominator)))
+        return str(abs(self.denominator//Fraction.gcd(self.numerator,self.denominator)))
 
     def get_fraction(self):
         if self.numerator == 0 or self.denominator == 0:
