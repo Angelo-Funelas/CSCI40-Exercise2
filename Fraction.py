@@ -7,20 +7,17 @@ class Fraction(object):
             splitStr = numerator.split('/')
             if len(splitStr) > 2:
                 self.numerator = 0
-                self.denominator = 1
                 return
             try:
                 self.numerator = int(splitStr[0])
                 self.denominator = int(splitStr[1])
             except ValueError:
                 self.numerator = 0
-                self.denominator = 1
         elif numerator%1 == 0 and denominator%1 == 0:
             self.numerator = numerator
             self.denominator = denominator
         else:
             self.numerator = 0
-            self.denominator = 1
         pass
 
     def gcd(a, b):
